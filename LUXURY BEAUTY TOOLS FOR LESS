@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Beauty Tools for Less | Glow Up Girl</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fdfbf7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #f8f6f0 0%, #f0ede5 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+        
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+            font-weight: 400;
+            letter-spacing: -1px;
+        }
+        
+        .blue-dot {
+            color: #2B5CE6;
+        }
+        
+        .brand-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #666;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #2a2a2a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .page-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .luxury-icons {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        .products-section {
+            padding: 80px 0;
+        }
+        
+        .section-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2a2a2a;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-intro p {
+            font-size: 16px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .product-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, #f8f6f0 0%, #f0ede5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .product-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .price-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #d4af37 0%, #f7d794 100%);
+            color: #2a2a2a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .product-content {
+            padding: 30px;
+        }
+        
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #2a2a2a;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .product-description {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .benefits-list li {
+            padding: 5px 0;
+            color: #666;
+            position: relative;
+            padding-left: 25px;
+            font-size: 14px;
+        }
+        
+        .benefits-list li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        
+        .shop-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2B5CE6 0%, #4c6ef5 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(43, 92, 230, 0.3);
+        }
+        
+        .shop-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(43, 92, 230, 0.4);
+            background: linear-gradient(135deg, #1e4bd1 0%, #3b5ce0 100%);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .cta-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #d4af37 0%, #f7d794 100%);
+            color: #2a2a2a;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .brand-logo {
+                font-size: 36px;
+            }
+            
+            .page-title {
+                font-size: 32px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .product-content {
+                padding: 20px;
+            }
+            
+            header {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand-logo">Glow<span class="blue-dot">•</span></div>
+            <div class="brand-subtitle">Up Girl</div>
+            <h1 class="page-title">Luxury Beauty Tools for Less</h1>
+            <div class="luxury-icons">💎✨</div>
+            <p class="page-subtitle">Transform your skincare routine with professional-grade tools that deliver spa-quality results at home</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Professional Beauty Tools Collection</h2>
+                    <p>Discover the secret weapons beauty experts use to achieve that coveted glow. Each tool is carefully selected for its proven results and affordable luxury.</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1: Gua Sha -->
+                    <div class="product-card">
+                        <div class="https://m.media-amazon.com/images/I/41cVDEk81zL._AC_SL1040_.jpg">
+                            <div class="product-placeholder">Gua Sha<br>Rose Quartz</div>
+                            <div class="price-badge">$8-12</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Gua Sha Rose Quartz Facial Tool</h3>
+                            <p class="product-description">
+                                This ancient Chinese beauty secret is now your modern skincare essential. Made from genuine rose quartz, this tool promotes lymphatic drainage and helps sculpt your facial contours naturally.
+                            </p>
+                            <ul class="benefits-list">
+                                <li>Reduces puffiness and inflammation</li>
+                                <li>Improves blood circulation for natural glow</li>
+                                <li>Lifts and tones facial muscles</li>
+                                <li>Helps skincare products absorb better</li>
+                                <li>Relieves facial tension and stress</li>
+                            </ul>
+                            <a href="https://amzn.to/3VbQFY9" class="shop-button">Shop Now on Amazon</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Jade Roller -->
+                    <div class="product-card">
+                        <div class="">https://m.media-amazon.com/images/I/51RRt1I+w0L._AC_SL1500_.jpg
+                            <div class="product-placeholder">Jade Roller<br>Massager</div>
+                            <div class="price-badge">$10-20</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Jade Roller Face Massager</h3>
+                            <p class="product-description">
+                                The classic beauty tool that celebrities swear by. This jade roller provides gentle massage that de-puffs, tightens, and gives you that fresh, awakened look every morning.
+                            </p>
+                            <ul class="benefits-list">
+                                <li>Instantly reduces morning puffiness</li>
+                                <li>Tightens and firms skin naturally</li>
+                                <li>Stimulates collagen production</li>
+                                <li>Improves product absorption by 2x</li>
+                                <li>Cool jade soothes irritated skin</li>
+                            </ul>
+                            <a href="https://amzn.to/41sy9hy" class="shop-button">Shop Now on Amazon</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: LED Mask -->
+                    <div class="product-card">
+                        <div class="https://m.media-amazon.com/images/I/71KbzkyThXL._AC_SL1500_.jpg">
+                            <div class="product-placeholder">LED Light<br>Therapy Mask</div>
+                            <div class="price-badge">$18-19</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">LED Light Therapy Face Mask</h3>
+                            <p class="product-description">
+                                Bring professional LED treatments home with this clinically-proven light therapy mask. Red and blue lights target different skin concerns for visible results in just weeks.
+                            </p>
+                            <ul class="benefits-list">
+                                <li>Red light stimulates collagen for anti-aging</li>
+                                <li>Blue light kills acne-causing bacteria</li>
+                                <li>Reduces fine lines and wrinkles</li>
+                                <li>Clears breakouts and prevents new ones</li>
+                                <li>FDA-approved technology at home</li>
+                            </ul>
+                            <a href="https://amzn.to/45HMCZD" class="shop-button">Shop Now on Amazon</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Ice Roller -->
+                    <div class="product-card">
+                        <div class="https://m.media-amazon.com/images/I/71f5L9lGEfL._AC_SL1500_.jpg">
+                            <div class="product-placeholder">Facial<br>Ice Roller</div>
+                            <div class="price-badge">$12-16</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Facial Ice Roller</h3>
+                            <p class="product-description">
+                                The ultimate wake-up call for your skin. This stainless steel ice roller provides instant depuffing and pore-tightening effects that makeup artists use for red-carpet ready skin.
+                            </p>
+                            <ul class="benefits-list">
+                                <li>Instantly tightens pores and reduces oiliness</li>
+                                <li>Eliminates under-eye bags in seconds</li>
+                                <li>Extends makeup wear time</li>
+                                <li>Soothes inflamed or sunburned skin</li>
+                                <li>Boosts circulation for healthy glow</li>
+                            </ul>
+                            <a href="https://amzn.to/41pLDuv" class="shop-button">Shop Now on Amazon</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: Cleansing Brush -->
+                    <div class="product-card">
+                        <div class="https://m.media-amazon.com/images/I/71ezGrN1AiL._AC_SL1500_.jpg">
+                            <div class="product-placeholder">Silicone<br>Face Brush</div>
+                            <div class="price-badge">$6-10</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Silicone Face Cleansing Brush</h3>
+                            <p class="product-description">
+                                Upgrade your cleansing routine with this gentle yet effective silicone brush. It removes 6x more dirt and oil than hands alone, while being gentle enough for daily use.
+                            </p>
+                            <ul class="benefits-list">
+                                <li>Removes 99% of makeup and impurities</li>
+                                <li>Gentle exfoliation without irritation</li>
+                                <li>Improves cleanser effectiveness</li>
+                                <li>Hygienic silicone won't harbor bacteria</li>
+                                <li>Prepares skin for better product absorption</li>
+                            </ul>
+                            <a href="https://amzn.to/3Vq2xWi" class="shop-button">Shop Now on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Ready to Glow Up? ✨</h2>
+                <p class="cta-text">Start your transformation today with these professional beauty tools</p>
+                <a href="#" class="cta-button">Shop All Beauty Tools</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
